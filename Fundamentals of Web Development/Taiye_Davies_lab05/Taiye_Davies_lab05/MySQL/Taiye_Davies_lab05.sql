@@ -1,0 +1,153 @@
+CREATE DATABASE IF NOT EXISTS Taiye_Davies_Lab05;
+/*Question 1*/
+CREATE TABLE STUDENT_INFO (
+    ID INT(10) NOT NULL,
+    NAME VARCHAR(100) NULL,
+    DOB DATE NULL,
+    INCOME DECIMAL(10, 2) NULL,
+    COURSE_ID INT(5) NULL
+);
+/*Question 2*/
+CREATE TABLE COURSE_INFO(
+    ID INT(10) NOT NULL,
+    NAME VARCHAR(100) NULL,
+    LOCATION VARCHAR(200) NULL,
+    STARTDATE DATE NULL,
+    TYPE VARCHAR(100) NULL
+);
+/*Question 3*/
+ALTER TABLE STUDENT_INFO
+ADD ADDRESS VARCHAR(200) NULL;
+/*Question 4*/
+ALTER TABLE COURSE_INFO
+MODIFY COLUMN NAME VARCHAR(200);
+/*Question 5*/
+RENAME TABLE STUDENT_INFO TO STUDENT;
+/*Question 6*/
+RENAME TABLE COURSE_INFO TO COURSE;
+/*Question 7*/
+INSERT INTO STUDENT
+VALUES (1, 'JOHN', '1998-05-01', 1200, 100, 'NORTH');
+INSERT INTO STUDENT
+VALUES (2, 'MIKE', '2000-08-15', 1100.15, 200, 'WEST');
+INSERT INTO STUDENT
+VALUES (3, 'SAM', '1997-11-01', 500, 100, 'SOUTH');
+/*Question 8*/
+INSERT INTO COURSE
+VALUES (
+        100,
+        'Fundamentals of Web Development',
+        'Azraeli Pavilion',
+        '2023-09-10',
+        'mandatory'
+    );
+INSERT INTO COURSE
+VALUES (
+        300,
+        'Analytical Methods',
+        'Tory Building',
+        '2023-09-17',
+        'elective'
+    );
+INSERT INTO COURSE
+VALUES (
+        500,
+        'Java Programming',
+        'Tory Building',
+        '2023-09-17',
+        'elective'
+    );
+INSERT INTO COURSE
+VALUES (
+        700,
+        'C++ Programming',
+        'Patterson Hall',
+        '2023-09-10',
+        'elective'
+    );
+/*Question 9*/
+UPDATE STUDENT
+SET INCOME = 1000
+WHERE ID = 2;
+/*Question 10*/
+UPDATE COURSE
+SET LOCATION = 'Patterson Hall'
+WHERE ID = 100;
+/*Question 11*/
+DELETE FROM STUDENT
+WHERE ID = 2;
+/*Question 12*/
+DELETE FROM COURSE
+WHERE ID = 300;
+/*Question 13*/
+SELECT *
+FROM STUDENT;
+/*Question 14*/
+SELECT *
+FROM COURSE;
+/*Question 15*/
+SELECT NAME,
+    DOB,
+    INCOME
+FROM STUDENT;
+/*Question 16*/
+SELECT ID,
+    NAME,
+    LOCATION
+FROM COURSE;
+/*Question 17*/
+SELECT NAME,
+    DOB,
+    INCOME
+FROM STUDENT
+WHERE INCOME > 6000;
+/*Question 18*/
+SELECT *
+FROM COURSE
+WHERE TYPE = 'elective'
+    AND LOCATION = 'Patterson Hall';
+/*Question 19*/
+SELECT STUDENT.ID,
+    COURSE.ID,
+    STUDENT.NAME,
+    COURSE.NAME,
+    DOB,
+    INCOME
+FROM STUDENT,
+    COURSE
+WHERE STUDENT.COURSE_ID = COURSE.ID;
+/*Question 20*/
+SELECT STUDENT.ID,
+    COURSE.ID,
+    STUDENT.NAME,
+    COURSE.NAME,
+    LOCATION,
+    STARTDATE
+FROM STUDENT
+    INNER JOIN COURSE
+WHERE STUDENT.COURSE_ID = COURSE.ID
+    AND INCOME > 1000;
+/*Question 21*/
+TRUNCATE TABLE STUDENT;
+SELECT *
+FROM STUDENT;
+/*Question 22*/
+TRUNCATE TABLE COURSE;
+SELECT *
+FROM COURSE;
+/*Question 23*/
+DROP TABLE STUDENT;
+SELECT *
+FROM STUDENT;
+/*Question 24*/
+DROP TABLE COURSE;
+SELECT *
+FROM COURSE;
+/*GAME TABLE */
+CREATE TABLE game_details(
+    game_ID INT(10) NOT NULL,
+    game_name VARCHAR(100) NULL,
+    release_date DATE NULL,
+    game_price DECIMAL(10, 2) NULL,
+    game_description TEXT NULL
+);
