@@ -1,0 +1,87 @@
+/*Page Body Style*/
+
+body {
+    text-align: justify;
+    margin: 2% 2%;
+    background-color: beige;
+}
+
+main {
+    text-align: center;
+    background-color: #839ac5;
+}
+
+nav {
+    padding: 10px 10px;
+    background-color: deepskyblue;
+    height: 100%;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+a {
+    padding: 10px 10px;
+    color: black;
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+h3 {
+    border: 6px;
+    color: blanchedalmond;
+}
+
+p {
+    font-size: larger;
+}
+
+img {
+    padding: 2px 4px 4px 20px;
+    width: 50%;
+    -align: center;
+}
+
+cite {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+figure img:hover {
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+hr {
+    border: 2px 2px;
+}
+
+footer {
+    text-align: center;
+}
+
+#overview:hover {
+    border: 2px darkcyan dashed;
+    margin: 4px;
+
+}
+
+#History:hover {
+    border: 2px solid darkcyan;
+
+}
+
+#console {
+    border: 10px solid goldenrod;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        border-color: lightblue;
+    }
+}

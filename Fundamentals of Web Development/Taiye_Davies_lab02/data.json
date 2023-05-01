@@ -1,0 +1,11 @@
+{
+    "classification": "mammals",
+    "types": [
+        "cheetah",
+        "bear",
+        "lion",
+        "dog",
+        "elephant",
+        "ape"
+    ]
+}
