@@ -1,0 +1,114 @@
+/*Page Body Style*/
+
+body {
+    text-align: justify;
+    margin: 2% 2%;
+    background-color: beige;
+}
+
+main {
+    text-align: center;
+    background-color: #839ac5;
+}
+
+nav {
+    padding: 10px 10px;
+    background-color: deepskyblue;
+    height: 100%;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+a {
+    padding: 10px 10px;
+    color: black;
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+h3 {
+    border: 6px;
+    color: brown;
+}
+
+p {
+    font-size: larger;
+}
+
+cite {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+figure img:hover {
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#overview:hover {
+    border: 2px darkcyan dashed;
+    margin: 4px;
+
+}
+
+#History:hover {
+    border: 2px solid darkcyan;
+
+}
+
+#console {
+    border: 10px solid goldenrod;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        border-color: lightblue;
+    }
+}
+
+hr {
+    border: 2px 2px;
+}
+
+footer {
+    text-align: center;
+}
+
+caption {
+    text-align: center;
+    font-size: x-large;
+    margin: 10px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+table {
+    border: 2px darkcyan solid;
+    border-collapse: collapse;
+    margin: 1rem 25rem;
+    text-align: center;
+}
+
+td {
+    color: red;
+    border: darkcyan;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+td img {
+    border-collapse: collapse;
+    display: block;
+}
+
+
+tr {
+    border-collapse: collapse;
+}
